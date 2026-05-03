@@ -3,8 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía del Sistema de Tareas</title>
 
 <style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #fff7ed 0%, #fef3c7 45%, #ecfccb 100%);
+  color: #3f2f24;
+  line-height: 1.7;
+}
+
+header {
+  text-align: center;
+  padding: 55px 20px 35px;
+  background: #fde68a;
+  border-bottom: 6px solid #fbbf24;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  max-width: 760px;
+  margin: 14px auto 0;
+  font-size: 1.15rem;
+}
+
+main {
+  max-width: 940px;
+  margin: 32px auto;
+  padding: 0 20px 60px;
+}
+
+section {
+  background: rgba(255, 250, 240, 0.95);
+  border: 2px solid #fcd34d;
+  border-radius: 24px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 22px rgba(120, 80, 30, 0.12);
+}
+
+h2 {
+  margin-top: 0;
+  color: #92400e;
+  font-size: 1.55rem;
+}
+
+h3 {
+  color: #b45309;
+  margin-bottom: 6px;
+}
+
+code {
+  background: #fef3c7;
+  color: #78350f;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.command {
+  background: #fffbeb;
+  border-left: 7px solid #f59e0b;
+  border-radius: 14px;
+  padding: 13px 16px;
+  margin: 12px 0;
+  font-weight: bold;
+}
+
+.box {
+  background: #f7fee7;
+  border: 2px solid #bef264;
+  border-radius: 18px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.estado {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 12px 0;
+  border-left: 7px solid #84cc16;
+}
+
+.warning {
+  background: #fff1f2;
+  border: 2px solid #fda4af;
+  border-radius: 18px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #78350f;
+  font-size: 1.05rem;
+}
+
+/* 🔗 LINKS (tu bloque añadido) */
 .links {
   background: rgba(120,160,255,0.08);
   border: 2px solid rgba(120,160,255,0.4);
@@ -23,3 +125,159 @@
   word-break: break-word;
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <h1>📝 Guía del Sistema de Tareas</h1>
+  <p>
+    Organiza tu sesión de estudio con una misión activa, tareas pendientes,
+    tareas hechas y pequeñas recompensas por avanzar ✨
+  </p>
+</header>
+
+<main>
+
+<section>
+  <h2>🌟 ¿Qué es el sistema de tareas?</h2>
+  <p>
+    El sistema de tareas permite que cada persona del chat apunte qué está haciendo durante la sesión.
+    Sirve para estudiar con intención, tener una misión clara y celebrar los avances.
+  </p>
+</section>
+
+<section>
+  <h2>🎯 La tarea activa</h2>
+  <div class="command">!tarea hacer resumen del tema 4</div>
+  <div class="box">
+    Si cambias de tarea, la anterior pasa automáticamente a pendientes.
+  </div>
+</section>
+
+<section>
+  <h2>✅ Completar una tarea</h2>
+  <div class="command">!hecha</div>
+  <div class="box">
+    +15 puntos 💎 por completar tareas
+  </div>
+</section>
+
+<section>
+  <h2>📋 Ver tus tareas</h2>
+  <div class="command">!mistareas</div>
+
+  <div class="estado"><strong>[ACTIVA]</strong> — actual</div>
+  <div class="estado"><strong>[PENDIENTE]</strong> — futuras</div>
+  <div class="estado"><strong>[HECHA]</strong> — completadas</div>
+</section>
+
+<section>
+  <h2>🎯 Ver tarea actual</h2>
+  <div class="command">!tareaactual</div>
+</section>
+
+<section>
+  <h2>🔁 Cambiar tarea</h2>
+  <div class="command">!cambiar 2</div>
+</section>
+
+<section>
+  <h2>✏️ Editar tarea</h2>
+  <div class="command">!editar 2 nuevo texto</div>
+</section>
+
+<section>
+  <h2>🔄 Retomar tarea</h2>
+  <div class="command">!retomar 3</div>
+</section>
+
+<section>
+  <h2>🧹 Limpiar tareas</h2>
+  <div class="command">!limpiar</div>
+</section>
+
+<section>
+  <h2>📅 Tareas de hoy</h2>
+  <div class="command">!hechashoy</div>
+</section>
+
+<section>
+  <h2>📌 Comandos principales</h2>
+  <p><code>!tarea</code>, <code>!hecha</code>, <code>!mistareas</code>, <code>!tareaactual</code>, <code>!cambiar</code>, <code>!editar</code>, <code>!retomar</code>, <code>!limpiar</code>, <code>!hechashoy</code></p>
+</section>
+
+<section>
+  <h2>💚 Filosofía</h2>
+  <p>Avanza poco a poco. No perfecto, pero constante 🌿</p>
+</section>
+
+<section>
+  <h2>🔗 Guías relacionadas</h2>
+
+  <div class="links">
+
+    <p>🌳 Bosque virtual:<br>
+      <a href="https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html">
+        https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html
+      </a>
+    </p>
+
+    <p>📝 Tareas:<br>
+      <a href="https://bibiopotoleando.github.io/bosque-visual/guia_tareas.html">
+        https://bibiopotoleando.github.io/bosque-visual/guia_tareas.html
+      </a>
+    </p>
+
+    <p>⌨️ Comandos:<br>
+      <a href="https://bibiopotoleando.github.io/bosque-visual/guia_comandos.html">
+        https://bibiopotoleando.github.io/bosque-visual/guia_comandos.html
+      </a>
+    </p>
+
+    <p>🎁 Canjeos:<br>
+      <a href="https://bibiopotoleando.github.io/bosque-visual/guia_canjeos.html">
+        https://bibiopotoleando.github.io/bosque-visual/guia_canjeos.html
+      </a>
+    </p>
+
+    <p>📌 Estados:<br>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/estados.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/estados.html
+      </a>
+    </p>
+
+    <p>☕ Bebidas:<br>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html
+      </a>
+    </p>
+
+    <p>🎯 Retos:<br>
+      <a href="https://bibiopotoleando.github.io/retos/retos.html">
+        https://bibiopotoleando.github.io/retos/retos.html
+      </a>
+    </p>
+
+    <p>🎮 Minijuego:<br>
+      <a href="https://bibiopotoleando.github.io/minijuego-guia/">
+        https://bibiopotoleando.github.io/minijuego-guia/
+      </a>
+    </p>
+
+    <p>📦 Material:<br>
+<a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
+https://bibiopotoleando.github.io/estados-y-bebidas/material.html
+</a>
+</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+📝 Gracias por cuidar tus misiones de estudio ✨
+</footer>
+
+</body>
+</html>
