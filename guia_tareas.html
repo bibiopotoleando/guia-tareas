@@ -73,6 +73,8 @@ code {
   padding: 13px 16px;
   margin: 12px 0;
   font-weight: bold;
+  font-family: monospace;
+  font-size: 1.05rem;
 }
 
 .box {
@@ -106,7 +108,7 @@ footer {
   font-size: 1.05rem;
 }
 
-/* 🔗 LINKS (tu bloque añadido) */
+/* 🔗 LINKS */
 .links {
   background: rgba(120,160,255,0.08);
   border: 2px solid rgba(120,160,255,0.4);
@@ -117,6 +119,7 @@ footer {
 
 .links p {
   margin-bottom: 14px;
+  margin-top: 0;
 }
 
 .links a {
@@ -132,8 +135,8 @@ footer {
 <header>
   <h1>📝 Guía del Sistema de Tareas</h1>
   <p>
-    Organiza tu sesión de estudio con una misión activa, tareas pendientes,
-    tareas hechas y pequeñas recompensas por avanzar ✨
+    Organiza tu sesión de estudio con una misión activa, gestiona tus objetivos pendientes 
+    y haz un seguimiento visual de tu rendimiento diario ✨
   </p>
 </header>
 
@@ -142,24 +145,23 @@ footer {
 <section>
   <h2>🌟 ¿Qué es el sistema de tareas?</h2>
   <p>
-    El sistema de tareas permite que cada persona del chat apunte qué está haciendo durante la sesión.
-    Sirve para estudiar con intención, tener una misión clara y celebrar los avances.
+    Es una herramienta interactiva diseñada para que cada estudiante opositorde la sala apunte públicamente sus objetivos de la sesión. Su propósito es fomentar el estudio con intención, estructurar los bloques de enfoque y celebrar de forma conjunta cada avance completado en el escritorio.
   </p>
 </section>
 
 <section>
-  <h2>🎯 La tarea activa</h2>
+  <h2>🎯 Establecer una tarea activa</h2>
   <div class="command">!tarea hacer resumen del tema 4</div>
   <div class="box">
-    Si cambias de tarea, la anterior pasa automáticamente a pendientes.
+    💡 <strong>Mecánica automática:</strong> Si decides iniciar una nueva tarea utilizando el mismo comando, la misión que tenías activa en ese momento se desplazará de forma automática a tu lista de pendientes para que no pierdas su registro.
   </div>
 </section>
 
 <section>
   <h2>✅ Completar una tarea</h2>
   <div class="command">!hecha</div>
-  <div class="box">
-    +15 puntos 💎 por completar tareas
+  <div class="box" style="border-left: 5px solid #84cc16; background: rgba(132, 204, 22, 0.04);">
+    🏅 <strong>Productividad y Gamificación:</strong> Marcar tus objetivos como completados actualiza tu base de datos de rendimiento. Acumular tareas hechas es el requisito indispensable para desbloquear las <strong>Insignias Avanzadas de Estudio y Oposiciones</strong> (como las medallas de <i>apuntes</i> o <i>temas</i>). ¡Haz crecer tu vitrina personal y escala puestos en el ranking!
   </div>
 </section>
 
@@ -167,49 +169,56 @@ footer {
   <h2>📋 Ver tus tareas</h2>
   <div class="command">!mistareas</div>
 
-  <div class="estado"><strong>[ACTIVA]</strong> — actual</div>
-  <div class="estado"><strong>[PENDIENTE]</strong> — futuras</div>
-  <div class="estado"><strong>[HECHA]</strong> — completadas</div>
+  <div class="estado"><strong>[ACTIVA]</strong> — El bloque de estudio en el que estás concentrado justo ahora.</div>
+  <div class="estado"><strong>[PENDIENTE]</strong> — Objetivos futuros estructurados para los siguientes Pomodoros.</div>
+  <div class="estado"><strong>[HECHA]</strong> — Historial de misiones completadas con éxito durante la jornada.</div>
 </section>
 
 <section>
   <h2>🎯 Ver tarea actual</h2>
+  <p>Muestra de forma aislada e inmediata en el chat lo que estás haciendo en este Pomodoro:</p>
   <div class="command">!tareaactual</div>
 </section>
 
 <section>
   <h2>🔁 Cambiar tarea</h2>
+  <p>Intercambia tu puesto de enfoque por una de tus tareas almacenadas en la lista de pendientes indicando su número de índice:</p>
   <div class="command">!cambiar 2</div>
 </section>
 
 <section>
   <h2>✏️ Editar tarea</h2>
+  <p>Corrige o reescribe el texto de un objetivo pendiente si tu planificación ha cambiado:</p>
   <div class="command">!editar 2 nuevo texto</div>
 </section>
 
 <section>
   <h2>🔄 Retomar tarea</h2>
+  <p>Devuelve una misión completada del bloque de hechas de vuelta a tu lista de tareas activas:</p>
   <div class="command">!retomar 3</div>
 </section>
 
 <section>
   <h2>🧹 Limpiar tareas</h2>
+  <p>Vacía por completo tu historial personal para empezar una sesión de estudio desde cero:</p>
   <div class="command">!limpiar</div>
 </section>
 
 <section>
   <h2>📅 Tareas de hoy</h2>
+  <p>Despliega un recuento rápido de todos los hitos que has conseguido salvar a lo largo de la jornada actual:</p>
   <div class="command">!hechashoy</div>
 </section>
 
 <section>
-  <h2>📌 Comandos principales</h2>
+  <h2>📌 Caja de herramientas (Resumen)</h2>
+  <p>Puedes interactuar con el bot de tareas utilizando cualquiera de estos términos clave:</p>
   <p><code>!tarea</code>, <code>!hecha</code>, <code>!mistareas</code>, <code>!tareaactual</code>, <code>!cambiar</code>, <code>!editar</code>, <code>!retomar</code>, <code>!limpiar</code>, <code>!hechashoy</code></p>
 </section>
 
 <section>
-  <h2>💚 Filosofía</h2>
-  <p>Avanza poco a poco. No perfecto, pero constante 🌿</p>
+  <h2>💚 Filosofía del espacio</h2>
+  <p>Avanza a tu propio ritmo, desglosando misiones gigantes en pequeños pasos alcanzables. Recuerda siempre en cada Pomodoro: ¡No buscamos la perfección absoluta, sino la constancia real! 🌿</p>
 </section>
 
 <section>
@@ -260,24 +269,24 @@ footer {
     </p>
 
     <p>📦 Material:<br>
-<a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
-https://bibiopotoleando.github.io/estados-y-bebidas/material.html
-</a>
-</p>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/material.html
+      </a>
+    </p>
 
     <p>🏅 Insignias:<br>
-  <a href="https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html">
-    https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html
-  </a>
-</p>
-    
+      <a href="https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html">
+        https://bibiopotoleando.github.io/guia-insignias/guia_insignias.html
+      </a>
+    </p>
+        
   </div>
 </section>
 
 </main>
 
 <footer>
-📝 Gracias por cuidar tus misiones de estudio ✨
+📝 Gracias por cuidar y defender tus misiones de estudio diario ✨
 </footer>
 
 </body>
