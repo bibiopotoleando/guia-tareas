@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+html_content = """<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guía del Sistema de Tareas</title>
+<title>Guía del Sistema de Tareas / Tarefas</title>
 
 <style>
 body {
@@ -133,7 +133,7 @@ footer {
 <body>
 
 <header>
-  <h1>📝 Guía del Sistema de Tareas</h1>
+  <h1>📝 Guía del Sistema de Tareas / Tarefas</h1>
   <p>
     Organiza tu sesión de estudio con una misión activa, gestiona tus objetivos pendientes 
     y haz un seguimiento visual de tu rendimiento diario ✨
@@ -145,13 +145,14 @@ footer {
 <section>
   <h2>🌟 ¿Qué es el sistema de tareas?</h2>
   <p>
-    Es una herramienta interactiva diseñada para que cada estudiante opositorde la sala apunte públicamente sus objetivos de la sesión. Su propósito es fomentar el estudio con intención, estructurar los bloques de enfoque y celebrar de forma conjunta cada avance completado en el escritorio.
+    Es una herramienta interactiva diseñada para que cada estudiante opositor de la sala apunte públicamente sus objetivos de la sesión. 
+    Su propósito es fomentar el estudio con intención, estructurar los bloques de enfoque y celebrar de forma conjunta cada avance completado en el escritorio. 
   </p>
 </section>
 
 <section>
   <h2>🎯 Establecer una tarea activa</h2>
-  <div class="command">!tarea hacer resumen del tema 4</div>
+  <div class="command">!tarea / !tarefa [texto]</div>
   <div class="box">
     💡 <strong>Mecánica automática:</strong> Si decides iniciar una nueva tarea utilizando el mismo comando, la misión que tenías activa en ese momento se desplazará de forma automática a tu lista de pendientes para que no pierdas su registro.
   </div>
@@ -159,15 +160,21 @@ footer {
 
 <section>
   <h2>✅ Completar una tarea</h2>
-  <div class="command">!hecha</div>
+  <div class="command">!hecha / !feita [número/texto]</div>
+  <p>Puedes tachar tus misiones indicando su número en la lista o escribiendo parte de su nombre.</p>
   <div class="box" style="border-left: 5px solid #84cc16; background: rgba(132, 204, 22, 0.04);">
-    🏅 <strong>Productividad y Gamificación:</strong> Marcar tus objetivos como completados actualiza tu base de datos de rendimiento. Acumular tareas hechas es el requisito indispensable para desbloquear las <strong>Insignias Avanzadas de Estudio y Oposiciones</strong> (como las medallas de <i>apuntes</i> o <i>temas</i>). ¡Haz crecer tu vitrina personal y escala puestos en el ranking!
+    ✨ <strong>¡Búsqueda inteligente!</strong> Si usas texto (ej: <code>!feita constitucion</code>), el bot buscará la tarea y te pedirá confirmación en el chat antes de tacharla, evitando así cualquier accidente. Si usas el número (ej: <code>!hecha 2</code>), la tachará directamente.
+  </div>
+  <div class="box" style="border-left: 5px solid #84cc16; background: rgba(132, 204, 22, 0.04); margin-top: 14px;">
+    🏅 <strong>Productividad y Gamificación:</strong> Marcar tus objetivos como completados actualiza tu base de datos de rendimiento. 
+    Acumular tareas hechas es el requisito indispensable para desbloquear las <strong>Insignias Avanzadas de Estudio y Oposiciones</strong> (como las medallas de <i>apuntes</i> o <i>temas</i>). 
+    ¡Haz crecer tu vitrina personal y escala puestos en el ranking!
   </div>
 </section>
 
 <section>
   <h2>📋 Ver tus tareas</h2>
-  <div class="command">!mistareas</div>
+  <div class="command">!mistareas / !miñastarefas</div>
 
   <div class="estado"><strong>[ACTIVA]</strong> — El bloque de estudio en el que estás concentrado justo ahora.</div>
   <div class="estado"><strong>[PENDIENTE]</strong> — Objetivos futuros estructurados para los siguientes Pomodoros.</div>
@@ -177,12 +184,13 @@ footer {
 <section>
   <h2>🎯 Ver tarea actual</h2>
   <p>Muestra de forma aislada e inmediata en el chat lo que estás haciendo en este Pomodoro:</p>
-  <div class="command">!tareaactual</div>
+  <div class="command">!tareaactual / !tarefaactual</div>
 </section>
 
 <section>
   <h2>🔁 Cambiar tarea</h2>
   <p>Intercambia tu puesto de enfoque por una de tus tareas almacenadas en la lista de pendientes indicando su número de índice:</p>
+  
   <div class="command">!cambiar 2</div>
 </section>
 
@@ -207,18 +215,28 @@ footer {
 <section>
   <h2>📅 Tareas de hoy</h2>
   <p>Despliega un recuento rápido de todos los hitos que has conseguido salvar a lo largo de la jornada actual:</p>
+ 
   <div class="command">!hechashoy</div>
 </section>
 
 <section>
   <h2>📌 Caja de herramientas (Resumen)</h2>
-  <p>Puedes interactuar con el bot de tareas utilizando cualquiera de estos términos clave:</p>
-  <p><code>!tarea</code>, <code>!hecha</code>, <code>!mistareas</code>, <code>!tareaactual</code>, <code>!cambiar</code>, <code>!editar</code>, <code>!retomar</code>, <code>!limpiar</code>, <code>!hechashoy</code></p>
+  <p>Puedes interactuar con el bot de tareas utilizando cualquiera de estos términos clave (¡en castellano ou galego!):</p>
+  <p>
+    <code>!tarea</code> / <code>!tarefa</code><br>
+    <code>!hecha</code> / <code>!feita</code> / <code>!feito</code><br>
+    <code>!mistareas</code> / <code>!miñastarefas</code><br>
+    <code>!infotareas</code> / <code>!infotarefas</code><br>
+    <code>!tareaactual</code> / <code>!tarefaactual</code><br>
+    <code>!cambiar</code>, <code>!editar</code>, <code>!retomar</code>, <code>!limpiar</code>, <code>!hechashoy</code>
+  </p>
 </section>
 
 <section>
   <h2>💚 Filosofía del espacio</h2>
-  <p>Avanza a tu propio ritmo, desglosando misiones gigantes en pequeños pasos alcanzables. Recuerda siempre en cada Pomodoro: ¡No buscamos la perfección absoluta, sino la constancia real! 🌿</p>
+  <p>Avanza a tu propio ritmo, desglosando misiones gigantes en pequeños pasos alcanzables. 
+    Recuerda siempre en cada Pomodoro: ¡No buscamos la perfección absoluta, sino la constancia real! 
+  🌿</p>
 </section>
 
 <section>
@@ -291,3 +309,9 @@ footer {
 
 </body>
 </html>
+"""
+
+with open('GITHUB_TAREAS_v2.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("[file-tag: GITHUB_TAREAS_v2.html]")
