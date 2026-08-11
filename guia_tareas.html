@@ -238,14 +238,65 @@ footer {
 
 <section>
   <h2>🔄 Retomar tarea</h2>
-  <p>Devuelve una misión completada del bloque de hechas de vuelta a tu lista de tareas activas:</p>
-  <div class="command">!retomar 3</div>
+  <p>
+    Recupera una tarea y la coloca como tu nueva tarea <strong>ACTIVA</strong>.
+    Si ya tenías otra activa, esa vuelve automáticamente a <strong>PENDIENTES</strong>.
+  </p>
+
+  <div class="command">!retomar [número]</div>
+
+  <div class="box">
+    💡 <strong>Funcionamiento normal:</strong>
+    usa el número que aparece en <code>!mistareas</code>.
+    Por ejemplo, <code>!retomar 3</code> retoma la tarea nº 3 de tu lista actual.
+  </div>
+
+  <div class="box" style="margin-top: 14px;">
+    ↩️ <strong>¿Has limpiado una tarea por error?</strong><br>
+    El bot guarda temporalmente tu última limpieza para que puedas recuperarla usando el número que tenía antes de desaparecer:
+    <div class="command" style="margin-bottom: 4px;">!retomar limpiada 3</div>
+    Así recuperarás la antigua tarea nº 3 de tu última limpieza y volverá como <strong>ACTIVA</strong>.
+  </div>
+
+  <div class="box" style="margin-top: 14px;">
+    ✨ Si usas simplemente <code>!retomar 8</code> y actualmente no existe una tarea nº 8,
+    el bot intentará encontrar ese número en tu última limpieza.
+  </div>
 </section>
 
 <section>
   <h2>🧹 Limpiar tareas</h2>
-  <p>Vacía por completo tu historial personal para empezar una sesión de estudio desde cero:</p>
+  <p>
+    Elimina de tu lista únicamente el tipo de tareas que quieras.
+    Antes de borrarlas, el bot te dirá qué tareas ha limpiado y qué número tenía cada una para que puedas recuperarlas si fue un error.
+  </p>
+
   <div class="command">!limpiar</div>
+  <p>
+    Sin añadir nada, limpia tus tareas <strong>ACTIVAS + PENDIENTES</strong>.
+    Las tareas hechas permanecen en la lista.
+  </p>
+
+  <div class="command">!limpiar activas</div>
+  <p>Elimina solamente las tareas que estén <strong>ACTIVAS</strong>.</p>
+
+  <div class="command">!limpiar pendientes</div>
+  <p>Elimina solamente las tareas <strong>PENDIENTES</strong>.</p>
+
+  <div class="command">!limpiar hechas</div>
+  <p>Elimina solamente las tareas marcadas como <strong>HECHAS</strong> de tu lista visible.</p>
+
+  <div class="box">
+    🛟 <strong>Protección contra accidentes:</strong>
+    la última limpieza se guarda temporalmente. Si quieres recuperar una tarea, usa
+    <code>!retomar limpiada número</code> con el número que el bot mostró al limpiarla.
+  </div>
+
+  <div class="box" style="margin-top: 14px;">
+    🏅 <strong>Importante:</strong>
+    limpiar tareas hechas solo las quita de tu lista de tareas.
+    No borra tu contador histórico de tareas completadas ni el progreso acumulado para insignias.
+  </div>
 </section>
 
 <section>
@@ -265,7 +316,9 @@ footer {
     <code>!infotareas</code> / <code>!infotarefas</code><br>
     <code>!tareaactual</code> / <code>!tarefaactual</code><br>
     <code>!hechashoy</code> / <code>!feitashoxe</code><br>
-    <code>!cambiar</code>, <code>!editar</code>, <code>!retomar</code>, <code>!limpiar</code>
+    <code>!cambiar</code>, <code>!editar</code><br>
+    <code>!retomar número</code> / <code>!retomar limpiada número</code><br>
+    <code>!limpiar</code> / <code>!limpiar activas</code> / <code>!limpiar pendientes</code> / <code>!limpiar hechas</code>
   </p>
 </section>
 
