@@ -299,6 +299,44 @@ footer {
   </div>
 </section>
 
+
+<section>
+  <h2>⏰ Recordatorios</h2>
+  <p>
+    Puedes pedirle al bot que te recuerde algo dentro de unos minutos. El recordatorio queda asociado a tu usuario
+    y, cuando llegue el momento, el bot te mencionará en el chat con el texto que hayas guardado.
+  </p>
+
+  <div class="command">!recordatorio [minutos] [texto]</div>
+
+  <div class="box">
+    💡 <strong>Ejemplo:</strong><br>
+    <code>!recordatorio 20 sacar la pizza del horno</code><br><br>
+    El bot confirmará que lo ha guardado y, 20 minutos después, escribirá en el chat:
+    <br><br>
+    <strong>🔔 @usuario, ¡recordatorio! sacar la pizza del horno</strong>
+  </div>
+
+  <div class="box" style="margin-top: 14px;">
+    📋 <strong>Ver tus recordatorios pendientes:</strong>
+    <div class="command" style="margin-bottom: 4px;">!recordatorios</div>
+    El bot mostrará tus recordatorios pendientes numerados, junto con el tiempo aproximado que falta para cada uno.
+  </div>
+
+  <div class="box" style="margin-top: 14px;">
+    🗑️ <strong>Eliminar un recordatorio:</strong>
+    <div class="command" style="margin-bottom: 4px;">!borrarrecordatorio [número]</div>
+    Usa el número que aparece al consultar <code>!recordatorios</code>.
+    Por ejemplo, <code>!borrarrecordatorio 2</code> elimina tu recordatorio nº 2.
+  </div>
+
+  <div class="box" style="margin-top: 14px; border-left: 5px solid #3b82f6; background: rgba(59, 130, 246, 0.04);">
+    💾 <strong>Los recordatorios son persistentes:</strong>
+    quedan guardados aunque Streamer.bot se cierre o se reinicie. Si uno vence mientras el bot está cerrado,
+    se enviará cuando el sistema vuelva a estar activo y pueda comprobar los recordatorios pendientes.
+  </div>
+</section>
+
 <section>
   <h2>📅 Tareas de hoy</h2>
   <p>Despliega un recuento rápido de todos los hitos que has conseguido salvar a lo largo de la jornada actual:</p>
@@ -318,7 +356,10 @@ footer {
     <code>!hechashoy</code> / <code>!feitashoxe</code><br>
     <code>!cambiar</code>, <code>!editar</code><br>
     <code>!retomar número</code> / <code>!retomar limpiada número</code><br>
-    <code>!limpiar</code> / <code>!limpiar activas</code> / <code>!limpiar pendientes</code> / <code>!limpiar hechas</code>
+    <code>!limpiar</code> / <code>!limpiar activas</code> / <code>!limpiar pendientes</code> / <code>!limpiar hechas</code><br>
+    <code>!recordatorio minutos texto</code><br>
+    <code>!recordatorios</code><br>
+    <code>!borrarrecordatorio número</code>
   </p>
 </section>
 
