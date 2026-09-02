@@ -337,10 +337,29 @@ footer {
 </section>
 
 <section>
+  <h2>🕒 Limpieza automática</h2>
+  <p>
+    No necesitas ir limpiando tu lista manualmente para evitar que se acumulen tareas antiguas:
+    el sistema hace mantenimiento automático según el estado de cada tarea.
+  </p>
+
+  <div class="estado"><strong>▶️ ACTIVAS</strong> — Se eliminan automáticamente cuando llevan <strong>3 días</strong>.</div>
+  <div class="estado"><strong>❗ PENDIENTES</strong> — Se eliminan automáticamente cuando llevan <strong>5 días</strong>.</div>
+  <div class="estado"><strong>✅ HECHAS</strong> — Se eliminan automáticamente a las <strong>24 horas</strong>, es decir, al día siguiente.</div>
+
+  <div class="box">
+    🌿 <strong>Así que no hace falta usar <code>!limpiar</code> por mantenimiento.</strong><br>
+    Puedes dejar que el sistema vaya retirando las tareas antiguas por sí solo.
+    El comando <code>!limpiar</code> queda simplemente como opción si quieres quitar algo de tu lista antes de que llegue su limpieza automática.
+  </div>
+</section>
+
+<section>
   <h2>🧹 Limpiar tareas</h2>
   <p>
-    Elimina de tu lista únicamente el tipo de tareas que quieras. Antes de borrarlas,
-    el bot conserva su número, nombre y estado para que puedas recuperarlas si fue un error.
+    La limpieza manual es <strong>opcional</strong>: úsala solo si quieres quitar algo antes de que
+    el sistema lo elimine automáticamente. Puedes elegir exactamente qué tipo de tareas retirar.
+    Antes de borrarlas, el bot conserva su número, nombre y estado para que puedas recuperarlas si fue un error.
   </p>
 
   <div class="command">!limpiar</div>
