@@ -127,6 +127,21 @@ footer {
   font-weight: 600;
   word-break: break-word;
 }
+
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:18px}
+.indice{background:linear-gradient(135deg,#fffdf6 0%,#fff7df 100%);border:2px solid #fbbf24}
+.indice-intro{margin-top:-4px;opacity:.82}
+.indice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.indice-link{display:flex;align-items:center;justify-content:center;text-align:center;padding:11px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid #f4cf68;color:inherit;text-decoration:none;font-weight:700;box-shadow:0 3px 10px rgba(120,80,30,.07)}
+.indice-link:hover{transform:translateY(-1px);background:#fff}
+.volver{display:inline-block;margin-top:12px;color:inherit;font-weight:700;text-decoration:none;opacity:.78}
+.volver:hover{text-decoration:underline}
+.demo-btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border-radius:999px;background:#efe2d2;color:#3d2d22;text-decoration:none;font-weight:800;border:1px solid #d7c2a8}
+.demo-btn:hover{filter:brightness(.98);transform:translateY(-1px)}
+@media(max-width:760px){.indice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.indice-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 
@@ -140,22 +155,25 @@ footer {
 </header>
 
 <main>
+<section class="indice" id="indice">
+<h2>📚 Ir directamente a...</h2>
+<p class="indice-intro">Pulsa en el apartado que quieras consultar.</p>
+<div class="indice-grid"><a class="indice-link" href="#que-es">🌟 Qué es</a><a class="indice-link" href="#anadir">🎯 Añadir</a><a class="indice-link" href="#completar">✅ Completar</a><a class="indice-link" href="#ver">📋 Mi lista</a><a class="indice-link" href="#actual">🎯 Actual</a><a class="indice-link" href="#cambiar">🔁 Cambiar</a><a class="indice-link" href="#editar">✏️ Editar</a><a class="indice-link" href="#retomar">🔄 Retomar</a><a class="indice-link" href="#limpiar">🧹 Limpiar</a><a class="indice-link" href="#recordatorios">⏰ Recordatorios</a><a class="indice-link" href="#hoy">📅 Hoy</a><a class="indice-link" href="#resumen">📌 Chuleta</a><a class="indice-link" href="#guias">🔗 Más guías</a></div>
+</section>
 
 <div class="box" style="border-left: 7px solid #3b82f6; background: rgba(59, 130, 246, 0.05); margin-bottom: 24px; padding: 20px; border-radius: 20px;">
   💙 <strong>Nota sobre o idioma / Nota bilingüe:</strong> 
   O sistema de tarefas está totalmente adaptado ao galego! Podes interactuar co bot utilizando os comandos na lingua que prefiras. Se usas un comando en galego, o bot responderache automaticamente en galego e con moito agarimo. Como na casa ✨
 </div>
 
-<section>
-  <h2>🌟 ¿Qué es el sistema de tareas?</h2>
+<section id="que-es"><h2>🌟 ¿Qué es el sistema de tareas?</h2>
   <p>
-    Es una herramienta interactiva diseñada para que cada estudiante opositor de la sala apunte públicamente sus objetivos de la sesión. 
+    Es una herramienta interactiva diseñada para que cada persona de la sala apunte públicamente sus objetivos de la sesión. 
     Su propósito es fomentar el estudio con intención, estructurar los bloques de enfoque y celebrar de forma conjunta cada avance completado en el escritorio. 
   </p>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🎯 Añadir una o varias tareas</h2>
+<section id="anadir"><h2>🎯 Añadir una o varias tareas</h2>
   <div class="command">!tarea / !tarefa [texto]</div>
 
   <p>
@@ -189,10 +207,9 @@ footer {
     Por ejemplo, <code>!tarea tema 1;;tema 2;</code> guardará solamente
     <strong>tema 1</strong> y <strong>tema 2</strong>.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>✅ Completar una tarea</h2>
+<section id="completar"><h2>✅ Completar una tarea</h2>
   <div class="command">!hecha / !feita [número o texto]</div>
 
   <p>
@@ -224,10 +241,9 @@ footer {
     completar una tarea suma el progreso correspondiente. Si una tarea ya estaba marcada como
     <strong>✅ HECHA</strong>, volver a seleccionarla por número o por texto no vuelve a dar XP.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>📋 Ver tus tareas</h2>
+<section id="ver"><h2>📋 Ver tus tareas</h2>
   <div class="command">!mistareas / !miñastarefas / !minastarefas</div>
 
   <p>
@@ -250,16 +266,14 @@ footer {
     si tienes muchas tareas acumuladas, el bot divide la lista en varios mensajes consecutivos
     marcados con <code>(cont)</code> para respetar el límite de Twitch.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🎯 Ver tarea actual</h2>
+<section id="actual"><h2>🎯 Ver tarea actual</h2>
   <p>Muestra de forma aislada e inmediata en el chat lo que estás haciendo en este Pomodoro:</p>
   <div class="command">!tareaactual / !tarefaactual</div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🔁 Cambiar tarea</h2>
+<section id="cambiar"><h2>🔁 Cambiar tarea</h2>
   <p>
     Convierte otra tarea de tu lista en la nueva <strong>ACTIVA</strong>.
     La que estaba activa vuelve automáticamente a <strong>PENDIENTES</strong>.
@@ -274,10 +288,9 @@ footer {
     coincidencia exacta, parcial y pequeñas erratas. Si no es una coincidencia exacta segura,
     te pedirá confirmar con el número correcto antes de cambiar nada.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>✏️ Editar tarea</h2>
+<section id="editar"><h2>✏️ Editar tarea</h2>
   <p>
     Corrige o reescribe el texto de una tarea sin cambiar su estado.
     Puedes localizarla por número o por texto.
@@ -298,10 +311,9 @@ footer {
     admite coincidencias parciales y puede detectar pequeñas erratas. Si hay duda, el bot te pide
     confirmar usando el número de <code>!mistareas</code>.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🔄 Retomar tarea</h2>
+<section id="retomar"><h2>🔄 Retomar tarea</h2>
   <p>
     Recupera una tarea y la coloca como tu nueva tarea <strong>ACTIVA</strong>.
     Si ya tenías otra activa, esa vuelve automáticamente a <strong>PENDIENTES</strong>.
@@ -334,10 +346,9 @@ footer {
     coincidencia exacta, parcial o pequeña errata. Si hay duda, el bot te muestra la candidata
     y te pide confirmación por número.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🕒 Limpieza automática</h2>
+<section id="limpieza-auto"><h2>🕒 Limpieza automática</h2>
   <p>
     No necesitas ir limpiando tu lista manualmente para evitar que se acumulen tareas antiguas:
     el sistema hace mantenimiento automático según el estado de cada tarea.
@@ -352,10 +363,9 @@ footer {
     Puedes dejar que el sistema vaya retirando las tareas antiguas por sí solo.
     El comando <code>!limpiar</code> queda simplemente como opción si quieres quitar algo de tu lista antes de que llegue su limpieza automática.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🧹 Limpiar tareas</h2>
+<section id="limpiar"><h2>🧹 Limpiar tareas</h2>
   <p>
     La limpieza manual es <strong>opcional</strong>: úsala solo si quieres quitar algo antes de que
     el sistema lo elimine automáticamente. Puedes elegir exactamente qué tipo de tareas retirar.
@@ -391,10 +401,9 @@ footer {
     limpiar tareas hechas solo las quita de tu lista visible. No borra el contador histórico
     de tareas completadas ni el progreso acumulado para insignias.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🗂️ Ver tareas limpiadas</h2>
+<section id="limpiadas"><h2>🗂️ Ver tareas limpiadas</h2>
   <div class="command">!tareaslimpiadas</div>
 
   <p>
@@ -423,11 +432,10 @@ footer {
     ⚠️ Solo se conserva <strong>la última limpieza</strong> de cada usuario.
     Cuando haces una nueva limpieza, esa pasa a ser la lista recuperable.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
 
-<section>
-  <h2>⏰ Recordatorios</h2>
+<section id="recordatorios"><h2>⏰ Recordatorios</h2>
   <p>
     Puedes pedirle al bot que te recuerde algo dentro de unos minutos. El recordatorio queda asociado a tu usuario
     y, cuando llegue el momento, el bot te mencionará en el chat con el texto que hayas guardado.
@@ -461,17 +469,15 @@ footer {
     quedan guardados aunque Streamer.bot se cierre o se reinicie. Si uno vence mientras el bot está cerrado,
     se enviará cuando el sistema vuelva a estar activo y pueda comprobar los recordatorios pendientes.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>📅 Tareas de hoy</h2>
+<section id="hoy"><h2>📅 Tareas de hoy</h2>
   <p>Despliega un recuento rápido de todos los hitos que has conseguido salvar a lo largo de la jornada actual:</p>
  
   <div class="command">!hechashoy / !feitashoxe</div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>📌 Caja de herramientas (Resumen)</h2>
+<section id="resumen"><h2>📌 Caja de herramientas (Resumen)</h2>
   <p>Puedes interactuar con el bot de tareas utilizando estos comandos:</p>
   <p>
     <code>!tarea</code> / <code>!tarefa</code> — una tarea o varias separadas por <code>;</code><br>
@@ -497,17 +503,15 @@ footer {
     <code>!tareaslimpiadas</code> → números de la última limpieza.<br>
     Para una tarea borrada, escribe siempre <code>!retomar limpiada ...</code>.
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>💚 Filosofía del espacio</h2>
+<section id="filosofia"><h2>💚 Filosofía del espacio</h2>
   <p>Avanza a tu propio ritmo, desglosando misiones gigantes en pequeños pasos alcanzables. 
     Recuerda siempre en cada Pomodoro: ¡No buscamos la perfección absoluta, sino la constancia real! 
   🌿</p>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
-<section>
-  <h2>🔗 Guías relacionadas</h2>
+<section id="guias"><h2>🔗 Guías relacionadas</h2>
 
   <div class="links">
     <p>🌳 Bosque virtual:<br>
@@ -554,7 +558,7 @@ footer {
       </a>
     </p>
   </div>
-</section>
+<a class="volver" href="#indice">↑ Volver al índice</a></section>
 
 </main>
 
