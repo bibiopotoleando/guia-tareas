@@ -82,8 +82,7 @@ code {
   border: 2px solid #bef264;
   border-radius: 18px;
   padding: 16px;
-  margin-top: 14px;
-}
+  margin-}
 
 .estado {
   background: #ffffff;
@@ -98,8 +97,7 @@ code {
   border: 2px solid #fda4af;
   border-radius: 18px;
   padding: 16px;
-  margin-top: 14px;
-}
+  margin-}
 
 footer {
   text-align: center;
@@ -114,8 +112,7 @@ footer {
   border: 2px solid rgba(120,160,255,0.4);
   border-radius: 14px;
   padding: 15px;
-  margin-top: 20px;
-}
+  margin-}
 
 .links p {
   margin-bottom: 14px;
@@ -135,17 +132,98 @@ section[id]{scroll-margin-top:18px}
 .indice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
 .indice-link{display:flex;align-items:center;justify-content:center;text-align:center;padding:11px 12px;border-radius:999px;background:rgba(255,255,255,.9);border:1px solid #f4cf68;color:inherit;text-decoration:none;font-weight:700;box-shadow:0 3px 10px rgba(120,80,30,.07)}
 .indice-link:hover{transform:translateY(-1px);background:#fff}
-.volver{display:inline-block;margin-top:12px;color:inherit;font-weight:700;text-decoration:none;opacity:.78}
+.volver{display:inline-block;margin-color:inherit;font-weight:700;text-decoration:none;opacity:.78}
 .volver:hover{text-decoration:underline}
 .demo-btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;border-radius:999px;background:#efe2d2;color:#3d2d22;text-decoration:none;font-weight:800;border:1px solid #d7c2a8}
 .demo-btn:hover{filter:brightness(.98);transform:translateY(-1px)}
 @media(max-width:760px){.indice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.indice-grid{grid-template-columns:1fr}}
 
+
+.top-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:9999;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:#fef3c7;
+  color:#78350f;
+  border:2px solid #f59e0b;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.top-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 9px 22px rgba(0,0,0,.22);
+}
+@media(max-width:600px){
+  .top-btn{
+    right:12px;
+    bottom:12px;
+    padding:9px 12px;
+    font-size:.9rem;
+  }
+}
+
+
+
+}
+
+
+
+/* ===== navegación flotante compacta ===== */
+.nav-flotante{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:1200;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.nav-flotante a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:10px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.9rem;
+  line-height:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  transition:transform .15s ease, filter .15s ease;
+}
+.nav-flotante a:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.03);
+}
+@media(max-width:600px){
+  .nav-flotante{
+    right:10px;
+    bottom:10px;
+    gap:6px;
+  }
+  .nav-flotante a{
+    padding:9px 10px;
+    font-size:.82rem;
+  }
+}
+
+.nav-flotante a{background:#fff7df;color:#6b4b2a;border:2px solid #f4cf68;}
+
 </style>
 </head>
 
-<body>
+<body id="arriba">
 
 <header>
   <h1>📝 Guía del Sistema de Tareas / Tarefas</h1>
@@ -171,7 +249,7 @@ section[id]{scroll-margin-top:18px}
     Es una herramienta interactiva diseñada para que cada persona de la sala apunte públicamente sus objetivos de la sesión. 
     Su propósito es fomentar el estudio con intención, estructurar los bloques de enfoque y celebrar de forma conjunta cada avance completado en el escritorio. 
   </p>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="anadir"><h2>🎯 Añadir una o varias tareas</h2>
   <div class="command">!tarea / !tarefa [texto]</div>
@@ -193,7 +271,7 @@ section[id]{scroll-margin-top:18px}
     <em>El punto y coma <code>;</code> funciona únicamente como separador entre tareas.</em>
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🔢 <strong>La numeración siempre es la de tu lista real.</strong><br>
     Las tareas se ordenan como <strong>▶️ activa → ❗ pendientes → ✅ hechas</strong>.
     Por eso, si ya tenías otras pendientes, las nuevas pueden aparecer por ejemplo como
@@ -201,13 +279,13 @@ section[id]{scroll-margin-top:18px}
     esos serán exactamente los números que luego usarás con los demás comandos.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🛡️ <strong>Pequeños errores no dan problema:</strong>
     si escribes dos separadores seguidos o dejas uno al final, el bot ignora los huecos vacíos.
     Por ejemplo, <code>!tarea tema 1;;tema 2;</code> guardará solamente
     <strong>tema 1</strong> y <strong>tema 2</strong>.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="completar"><h2>✅ Completar una tarea</h2>
   <div class="command">!hecha / !feita [número o texto]</div>
@@ -231,17 +309,17 @@ section[id]{scroll-margin-top:18px}
   <div class="command">!hecha 2</div>
   <div class="command">!hecha constitucion</div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🔢 Los números son siempre los que ves en <code>!mistareas</code>, donde el estado aparece antes:
     <strong>▶️ 1.</strong>, <strong>❗ 2.</strong>, <strong>✅ 3.</strong>
   </div>
 
-  <div class="box" style="border-left: 5px solid #84cc16; background: rgba(132, 204, 22, 0.04); margin-top: 14px;">
+  <div class="box" style="border-left: 5px solid #84cc16; background: rgba(132, 204, 22, 0.04); margin-">
     🏅 <strong>Productividad y gamificación:</strong>
     completar una tarea suma el progreso correspondiente. Si una tarea ya estaba marcada como
     <strong>✅ HECHA</strong>, volver a seleccionarla por número o por texto no vuelve a dar XP.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="ver"><h2>📋 Ver tus tareas</h2>
   <div class="command">!mistareas / !miñastarefas / !minastarefas</div>
@@ -261,17 +339,17 @@ section[id]{scroll-margin-top:18px}
     <code>!hecha</code>, <code>!cambiar</code>, <code>!editar</code> y <code>!retomar</code>.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     💡 <strong>Antispam automático:</strong>
     si tienes muchas tareas acumuladas, el bot divide la lista en varios mensajes consecutivos
     marcados con <code>(cont)</code> para respetar el límite de Twitch.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="actual"><h2>🎯 Ver tarea actual</h2>
   <p>Muestra de forma aislada e inmediata en el chat lo que estás haciendo en este Pomodoro:</p>
   <div class="command">!tareaactual / !tarefaactual</div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="cambiar"><h2>🔁 Cambiar tarea</h2>
   <p>
@@ -288,7 +366,7 @@ section[id]{scroll-margin-top:18px}
     coincidencia exacta, parcial y pequeñas erratas. Si no es una coincidencia exacta segura,
     te pedirá confirmar con el número correcto antes de cambiar nada.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="editar"><h2>✏️ Editar tarea</h2>
   <p>
@@ -306,12 +384,12 @@ section[id]{scroll-margin-top:18px}
     <code>!editar "repasar tema uno" repasar tema 1 completo</code>.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     ✨ La búsqueda por texto funciona como en el resto del sistema: ignora tildes, mayúsculas y signos,
     admite coincidencias parciales y puede detectar pequeñas erratas. Si hay duda, el bot te pide
     confirmar usando el número de <code>!mistareas</code>.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="retomar"><h2>🔄 Retomar tarea</h2>
   <p>
@@ -330,7 +408,7 @@ section[id]{scroll-margin-top:18px}
     <code>!mistareas</code>. Nunca interpreta ese número automáticamente como una tarea borrada.
   </div>
 
-  <h3 style="margin-top: 22px;">🧹 Tarea de la última limpieza</h3>
+  <h3 style="margin-">🧹 Tarea de la última limpieza</h3>
   <div class="command">!retomar limpiada [número o texto]</div>
   <div class="command">!retomar limpiada 3</div>
   <div class="command">!retomar limpiada hacer test</div>
@@ -341,12 +419,12 @@ section[id]{scroll-margin-top:18px}
     y los números que tenía una tarea antes de ser limpiada.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     ✨ Tanto las tareas actuales como las limpiadas pueden buscarse por texto con el mismo sistema:
     coincidencia exacta, parcial o pequeña errata. Si hay duda, el bot te muestra la candidata
     y te pide confirmación por número.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="limpieza-auto"><h2>🕒 Limpieza automática</h2>
   <p>
@@ -363,7 +441,7 @@ section[id]{scroll-margin-top:18px}
     Puedes dejar que el sistema vaya retirando las tareas antiguas por sí solo.
     El comando <code>!limpiar</code> queda simplemente como opción si quieres quitar algo de tu lista antes de que llegue su limpieza automática.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="limpiar"><h2>🧹 Limpiar tareas</h2>
   <p>
@@ -389,19 +467,19 @@ section[id]{scroll-margin-top:18px}
     <strong>❗ 2. "hacer test"</strong> o <strong>✅ 5. "resumen tema 3"</strong>.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🛟 <strong>Protección contra accidentes:</strong>
     se guarda temporalmente <strong>la última limpieza de cada usuario</strong>.
     Puedes consultarla con <code>!tareaslimpiadas</code> y recuperar una con
     <code>!retomar limpiada número</code> o <code>!retomar limpiada texto</code>.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🏅 <strong>Importante:</strong>
     limpiar tareas hechas solo las quita de tu lista visible. No borra el contador histórico
     de tareas completadas ni el progreso acumulado para insignias.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="limpiadas"><h2>🗂️ Ver tareas limpiadas</h2>
   <div class="command">!tareaslimpiadas</div>
@@ -421,7 +499,7 @@ section[id]{scroll-margin-top:18px}
     Ese <code>2</code> pertenece a <strong>!tareaslimpiadas</strong>, no a tu lista actual.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🔎 <strong>Recuperar por texto:</strong>
     <div class="command" style="margin-bottom: 4px;">!retomar limpiada hacer test</div>
     También puedes escribir el nombre o parte del nombre. Si la coincidencia no es totalmente segura,
@@ -432,7 +510,7 @@ section[id]{scroll-margin-top:18px}
     ⚠️ Solo se conserva <strong>la última limpieza</strong> de cada usuario.
     Cuando haces una nueva limpieza, esa pasa a ser la lista recuperable.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 
 <section id="recordatorios"><h2>⏰ Recordatorios</h2>
@@ -451,31 +529,31 @@ section[id]{scroll-margin-top:18px}
     <strong>🔔 @usuario, ¡recordatorio! sacar la pizza del horno</strong>
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     📋 <strong>Ver tus recordatorios pendientes:</strong>
     <div class="command" style="margin-bottom: 4px;">!recordatorios</div>
     El bot mostrará tus recordatorios pendientes numerados, junto con el tiempo aproximado que falta para cada uno.
   </div>
 
-  <div class="box" style="margin-top: 14px;">
+  <div class="box" style="margin-">
     🗑️ <strong>Eliminar un recordatorio:</strong>
     <div class="command" style="margin-bottom: 4px;">!borrarrecordatorio [número]</div>
     Usa el número que aparece al consultar <code>!recordatorios</code>.
     Por ejemplo, <code>!borrarrecordatorio 2</code> elimina tu recordatorio nº 2.
   </div>
 
-  <div class="box" style="margin-top: 14px; border-left: 5px solid #3b82f6; background: rgba(59, 130, 246, 0.04);">
+  <div class="box" style="margin-border-left: 5px solid #3b82f6; background: rgba(59, 130, 246, 0.04);">
     💾 <strong>Los recordatorios son persistentes:</strong>
     quedan guardados aunque Streamer.bot se cierre o se reinicie. Si uno vence mientras el bot está cerrado,
     se enviará cuando el sistema vuelva a estar activo y pueda comprobar los recordatorios pendientes.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="hoy"><h2>📅 Tareas de hoy</h2>
   <p>Despliega un recuento rápido de todos los hitos que has conseguido salvar a lo largo de la jornada actual:</p>
  
   <div class="command">!hechashoy / !feitashoxe</div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="resumen"><h2>📌 Caja de herramientas (Resumen)</h2>
   <p>Puedes interactuar con el bot de tareas utilizando estos comandos:</p>
@@ -503,13 +581,13 @@ section[id]{scroll-margin-top:18px}
     <code>!tareaslimpiadas</code> → números de la última limpieza.<br>
     Para una tarea borrada, escribe siempre <code>!retomar limpiada ...</code>.
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="filosofia"><h2>💚 Filosofía del espacio</h2>
   <p>Avanza a tu propio ritmo, desglosando misiones gigantes en pequeños pasos alcanzables. 
     Recuerda siempre en cada Pomodoro: ¡No buscamos la perfección absoluta, sino la constancia real! 
   🌿</p>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 <section id="guias"><h2>🔗 Guías relacionadas</h2>
 
@@ -558,13 +636,22 @@ section[id]{scroll-margin-top:18px}
       </a>
     </p>
   </div>
-<a class="volver" href="#indice">↑ Volver al índice</a></section>
+<a class="volver" href="#indice">↑ Volver arriba</a></section>
 
 </main>
 
 <footer>
 📝 Gracias por cuidar y defender tus misiones de estudio diario ✨
 </footer>
+
+
+<a class="top-btn" href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+
+
+<div class="nav-flotante" aria-label="Navegación rápida">
+  <a href="#indice" aria-label="Ir al menú de esta guía">☰ Menú</a>
+  <a href="#arriba" aria-label="Volver arriba">↑ Arriba</a>
+</div>
 
 </body>
 </html>
